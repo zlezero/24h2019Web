@@ -2,7 +2,7 @@
 
 require_once('include/include.php');
 
-if (estConnecte()) {
+if (!estConnecte()) {
 	header("Location: index.php");
 	exit;
 }

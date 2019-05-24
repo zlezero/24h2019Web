@@ -1,6 +1,6 @@
 <?php
 
-if (estConnecte()) {
+if (!estConnecte()) {
 	header("Location: index.php");
 	exit;
 }
