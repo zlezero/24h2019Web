@@ -6,6 +6,27 @@ require_once("include/include.php");
 ?>
 
 	<body>
+	
+	
+		<?php
+		
+			if (isset($_SESSION["status"])) {
+			
+				switch ($_SESSION["status"]) {
+					case "6435cb6d73c2cfdb5f7106d9d0e515a2f608ac40": //Succès suppression
+						afficherSucces("La suppression a été effectuée !");
+						break;
+					case "1fbd1ac28aa66cc1c9630981edb77739e1577582": //Erreur suppression
+						afficherErreur("Une erreur est survenue lors de la suppression du pays.");
+						break;
+						
+				}
+			
+			}
+		
+		
+		?>
+		
 		<div class="tablePadding">
 			<table class="table sortable" id="tableData" >
 				<thead>

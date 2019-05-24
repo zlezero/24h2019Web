@@ -16,13 +16,13 @@ if (isset($_GET["request"]) AND isset($_GET["id"]) AND is_numeric($_GET["id"])) 
 			$bddConn->executeNonQuery("DELETE FROM Pays Where Id = :id", array("id" => $_GET["id"]));
 			
 			$_SESSION['status'] = sha1("successDel");
-			header("Location: users.php");
+			header("Location: viewPaysProd.php");
 			exit;
 		}
 
 	} catch (Exception $e) {
 		$_SESSION['status'] = sha1("errorDel");
-		header("Location: index.php");
+		header("Location: viewPaysProd.php");
 		exit;
 	}
 
