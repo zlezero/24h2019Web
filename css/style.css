@@ -4,3 +4,108 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+
+html, body {
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ background-image: linear-gradient(#b4831a, #e7b343 ,#ffd884); 
+ font-family: Verdana, sans-serif; 
+ font-size: 100%;
+ }
+h1 {
+ font-size: 200%; 
+ color: #2b200b; 
+ text-align: center;
+ transform: translateY(+50%);
+ }
+ 
+h2 {
+ font-size: 150%; 
+ color: red; 
+ padding-left: 15px;
+ }
+
+/************* ENTETE *************************/
+
+.entete {
+ 
+/*pas d'entete*/
+ width: 100%;
+ height: 100px;
+ background-image: url(../images/cartev3.jpg) ;
+ /*background-color: #2b200b;*/
+ border-bottom: 1px solid #b53210;
+}
+
+/************** NAVIGATION ********************/
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2b200b;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+  border-right: 2px solid #b53210;
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #111;
+  color: white;
+  text-decoration: none;
+  background-color: #b53210;
+}
+
+nav .active {
+  background-color: #b53210;
+}
+
+nav .imgLogo{
+  background: url(../images/index.jpg) right center no-repeat;
+  color: black;
+}
+
+nav .color{
+  color: white;
+} 
+
+/********************** TEXT *********************/
+
+p{
+ padding: 0px 10px 0px 10px;
+}
+
+/********************** FOOTER *******************/
+
+footer {
+  background-color: #2b200b;
+  color: white;
+}
+
+.text-centre {
+	text-align: center;
+}
