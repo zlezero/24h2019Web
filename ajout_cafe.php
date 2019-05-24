@@ -1,4 +1,12 @@
-<?php require_once("include/header.php"); ?>
+<?php
+
+if (estConnecte()) {
+	header("Location: index.php");
+	exit;
+}
+require_once("include/header.php");
+
+?>
 
 <h1>Ajouter une variété de café</h1>
 

@@ -1,9 +1,11 @@
 <?php
 
-session_start();
-
 $bddConn = new BDDApi("localhost", "EquipeVelizy2", "user1", "user1");
-
+session_start();
+/*
+$bddConn = new BDDApi("localhost", "EquipeVelizy2", "root", "");
+session_start();
+*/
 
 function estConnecte() {
 	
