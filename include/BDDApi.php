@@ -13,10 +13,10 @@ class BDDApi {
 	}
 	
 	public function getOneRow($command) {
-		$reponse = $this->_BddConn->query($request);
+		$reponse = $this->_BddConn->query($command);
 		$row = $reponse->fetch();
 		$reponse->closeCursor();
-		return $row;
+		return $row[0];
 	}
 	
 	public function executeQueryAndGetResultInArray($command, $paramArray) {

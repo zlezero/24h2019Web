@@ -5,7 +5,7 @@ require_once("include/include.php");
 
 ?>
 
-	<body>
+	<body id="main">
 	
 	
 		<?php

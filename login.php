@@ -55,6 +55,10 @@ if (isset($_POST["id"]) AND !empty($_POST["id"]) AND isset($_POST["pwd"]) AND !e
 					} elseif (isset($_SESSION["erreurTraitement"])) {
 						afficherErreur("Une erreur est survenue lors de la connexion.");
 						unset($_SESSION['erreurTraitement']);
+					} elseif (isset($_SESSION["statut"])) {
+						if ($_SESSION["statut"] == "0591bdb5d259412b95cf38f2e7a82f5c62d861f8") {
+							afficherSucces("L'inscription a été effectuée avec succès !");
+						}
 					}
 				?>
 			  </div>
