@@ -42,7 +42,7 @@ require_once("include/include.php");
 									<span><strong>Editer</strong></span>            
 								</a>
 								
-								<a href="#" id="delBtn<?php echo $donnees["id"]; ?>" class="btn btn-danger a-btn-slide-text delBtn" <?php callModalOnClick("ModalSupprPaysProd"); ?>>
+								<a href="#" id="delBtnPays<?php echo $donnees["id"]; ?>" class="btn btn-danger a-btn-slide-text delBtnPays">
 									<span class="fa fa-remove" aria-hidden="true"></span>
 									<span><strong>Supprimer</strong></span>            
 								</a>
@@ -53,13 +53,13 @@ require_once("include/include.php");
 					}
 					
 					createDatatable("tableData", null);
-					createModal("ModalSupprPaysProd", "Confirmation", "Êtes-vous sur de vouloir supprimer ce pays ?", "Supprimer", null, False);			
 					
 					?>
 				</tbody>
 			</table>
 		</div>
 		
+		<?php createModal("ModalSupprPaysProd", "Confirmation", "Êtes-vous sur de vouloir supprimer ce pays ?", "Supprimer", null, null, False); ?>
 	</body>
 
 </html>

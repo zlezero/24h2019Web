@@ -15,13 +15,14 @@ function getRequiredHeader() {
 		<script src="js/datatables.min.js"></script>
 		<script src="js/clipboard.min.js"></script>
 		<script src="js/BootstrapAPI.js"></script>
+		<script src="js/Scripts.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<?php
 }
 
 
-function createModal($id, $header, $content, $footerBtnText, $jsCallback, $triggerInstant) {
+function createModal($id, $header, $content, $footerBtnText, $jsCallback, $triggerInstant, $lien) {
 	
 	?>
 	
@@ -42,7 +43,9 @@ function createModal($id, $header, $content, $footerBtnText, $jsCallback, $trigg
 				<!-- Modal footer -->
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Retour</button>
-				  <button id="<?php echo $id; ?>ConfirmButton" class="btn btn-danger" onclick="<?php echo $jsCallback.'()'?>" ><?php echo $footerBtnText; ?></a>
+				  <?php if ($lien != null) { 
+					?> <a id="ConfirmButton" class="btn btn-danger" href="<?php $lien; ?>" ><?php echo $footerBtnText; ?></a>  <?php
+				  } else { ?> <a id="ConfirmButton" class="btn btn-danger" <?php if ($jsCallback != null) { echo 'onclick="'.$jsCallback.'()'; } ?>><?php echo $footerBtnText; ?></a> <?php }?>				  
 				</div>
 				
 			</div>
