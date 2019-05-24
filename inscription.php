@@ -123,7 +123,7 @@ if ($traitement) {
 			<input type="password" class="form-control" name="mdpConfirm" id="mdpConfirm" placeholder="Confirmer le nouveau mot de passe">
 		</div>
 		
-		<button type="submit" class="btn btn-success"> <i class="fa fa-sign-in"></i> S'inscrire</button>
+		<button type="submit" class="btn btn-success" id="btnInscription" > <i class="fa fa-sign-in"></i> S'inscrire</button>
 		
 	</form>
 </div>

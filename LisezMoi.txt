@@ -1,12 +1,12 @@
-# 24h2019Web4
+# 24h2019Web4 / Equipe Vélizy 2
 
-page d'acceuil du site : index.php
+Page d'accueil du site : index.php
 
-Exportateur:
+Exportateurs :
 
 id: Test		pass: test
 id: user1		pass: user1
 
-Importateur:
+Importateur :
 
 id: user2 		pass: azerty

@@ -42,7 +42,7 @@ require_once("include/include.php");
 						<th scope="col">Surface (en km²)</th>
 						<th scope="col">Qté. café prod. (en tonnes)</th>
 						<th scope="col">Qté. café prod. (en % de la pop. mondiale)</th>
-						<?php if (!estConnecte()) { ?> <th scope="col" class="sorttable_nosort">Actions</th> <?php } ?>
+						<?php if (!estConnecte()) { ?> <th scope="col" class="sorttable_nosort">Action</th> <?php } ?>
 					</tr>
 				</thead>
 				<tbody>
@@ -66,10 +66,10 @@ require_once("include/include.php");
 							<td id="dataQteCafeProdPourcentage<?php echo $donnees["id"]; ?>"><?php echo $donnees["QteCafeProd"]; ?></td>
 							<?php if (!estConnecte()) { ?> <td>
 						
-								<a href="#" class="btn btn-primary a-btn-slide-text editBtn" id="editBtn<?php echo $donnees["id"]; ?>">
+								<!--<a href="#" class="btn btn-primary a-btn-slide-text editBtn" id="editBtn<?php echo $donnees["id"]; ?>">
 									<span class="fa fa-edit" aria-hidden="true"></span>
 									<span><strong>Editer</strong></span>            
-								</a>
+								</a>!-->
 								
 								<a href="#" id="delBtnPays<?php echo $donnees["id"]; ?>" class="btn btn-danger a-btn-slide-text delBtnPays">
 									<span class="fa fa-remove" aria-hidden="true"></span>
