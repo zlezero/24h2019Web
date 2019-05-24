@@ -2,6 +2,11 @@
 
 require_once('include/include.php');
 
+if (estConnecte()) {
+	header("Location: index.php");
+	exit;
+}
+
 $var_post = array( $_POST['pays_provenance'],$_POST['type_cafe'], $_POST['quantity'] );
 foreach( $var_post as $val) {
 	if (!isset($val) || empty($val)) {
