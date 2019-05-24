@@ -1,5 +1,5 @@
 <?php
 
-$bddConn = new BDDApi("localhost", "24hWeb2019", "root", "");
+$bddConn = new BDDApi("localhost", "EquipeVelizy2", "user1", "user1");
 
 ?>
