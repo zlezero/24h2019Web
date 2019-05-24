@@ -1,7 +1,6 @@
-<footer class="page-footer fixed-bottom">
+<footer class="page-footer">
 	<div class="container-fluid">
-		<div class="row">
-			<p class="text-centre">Pied de page</p>
-		</div>
+		<p class="text-centre">Équipe Vélizy 2<br/>
+		VATHONNE / REPAIN / DESOBRY / SECHEHAYE</p>
 	</div>
 </footer>

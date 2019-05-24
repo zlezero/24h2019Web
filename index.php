@@ -38,11 +38,11 @@ require_once("include/include.php");
 						<th scope="col">Capitale</th>
 						<th scope="col">Drapeau</th>
 						<th scope="col">Description</th>
-						<th scope="col">Habitants</th>
-						<th scope="col">Surface</th>
-						<th scope="col">Qté. café prod. en tonnes</th>
-						<th scope="col">Qté. café prod. en % de la pop. mondiale</th>
-						<th scope="col" class="sorttable_nosort">Actions</th>
+						<th scope="col">Habitants (en millions)</th>
+						<th scope="col">Surface (en km²)</th>
+						<th scope="col">Qté. café prod. (en tonnes)</th>
+						<th scope="col">Qté. café prod. (en % de la pop. mondiale)</th>
+						<?php if (!estConnecte()) { ?> <th scope="col" class="sorttable_nosort">Actions</th> <?php } ?>
 					</tr>
 				</thead>
 				<tbody>
@@ -58,13 +58,13 @@ require_once("include/include.php");
 							<td scope="row"><strong><?php echo $compteurId; ?></strong></td>
 							<td id="dataNom<?php echo $donnees["id"]; ?>"><?php echo $donnees["Nom"]; ?></td>
 							<td id="dataCapitale<?php echo $donnees["id"]; ?>"><?php echo $donnees["Capitale"]; ?></td>
-							<td id="dataDrapeau<?php echo $donnees["id"]; ?>"><img href="<?php echo $donnees["Capitale"]; ?>" alt="Drapeau <?php echo $donnees["Nom"]; ?>"> </td>
+							<td id="dataDrapeau<?php echo $donnees["id"]; ?>"><img class="drapeau" src="<?php echo $donnees["CheminDrapeau"]; ?>" alt="Drapeau <?php echo $donnees["Nom"]; ?>"> </td>
 							<td id="dataDescription<?php echo $donnees["id"]; ?>"><?php echo $donnees["Description"]; ?></td>
-							<td id="dataNbrHab<?php echo $donnees["id"]; ?>"><?php echo $donnees["NbrHab"]; ?></td>
-							<td id="dataSurface<?php echo $donnees["id"]; ?>"><?php echo $donnees["Surface"]; ?></td>
+							<td id="dataNbrHab<?php echo $donnees["id"]; ?>"><?php echo number_format($donnees["NbrHab"]); ?></td>
+							<td id="dataSurface<?php echo $donnees["id"]; ?>"><?php echo number_format($donnees["Surface"]); ?></td>
 							<td id="dataQteCafeProdTonnes<?php echo $donnees["id"]; ?>"><?php echo $donnees["QteCafeProd"]; ?></td>
 							<td id="dataQteCafeProdPourcentage<?php echo $donnees["id"]; ?>"><?php echo $donnees["QteCafeProd"]; ?></td>
-							<td>
+							<?php if (!estConnecte()) { ?> <td>
 						
 								<a href="#" class="btn btn-primary a-btn-slide-text editBtn" id="editBtn<?php echo $donnees["id"]; ?>">
 									<span class="fa fa-edit" aria-hidden="true"></span>
@@ -76,9 +76,11 @@ require_once("include/include.php");
 									<span><strong>Supprimer</strong></span>            
 								</a>
 							
-							</td>			
+							</td> <?php } ?>			
 						</tr>
 						<?php
+						
+						$compteurId += 1;
 					}
 					
 					createDatatable("tableData", null);
