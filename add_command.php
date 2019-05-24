@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 require_once('include/include.php');
 
@@ -50,8 +50,8 @@ $res = $bddConn->executeNonQuery($query, $array);
 echo $res;
 
 // update stock
-$query = "update typecafe set QteStock = :stock where exportateur = :exportateur and TypeCafe = :typecafe";
-$array = array('stock' => $remaining, 'typecafe' => $_POST['type']);
+$query = "update typecafe set QteStock = QteStock - :stock where exportateur = :exportateur and TypeCafe = :typecafe";
+$array = array('stock' => $_POST['quantity'], 'typecafe' => $_POST['type']);
 $bddConn->executeNonQuery($query, $array);
 
 //header("Location: command_form.php");

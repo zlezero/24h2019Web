@@ -1,4 +1,5 @@
 <?php
+
 require_once('include/include.php');
 
 if (!estConnecte()) {
@@ -23,4 +24,5 @@ $bddConn->executeNonQuery($query, $array);
 
 header("Location: exportateur_stocks.php");
 exit;
+
 ?>

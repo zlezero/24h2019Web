@@ -1,0 +1,12 @@
+# 24h2019Web4
+
+page d'acceuil du site : index.php
+
+Exportateur:
+
+id: Test		pass: test
+id: user1		pass: user1
+
+Importateur:
+
+id: user2 		pass: azerty
